@@ -79,6 +79,7 @@
 					this:SetBackdropColor(0,0,1)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth(UnitMana("player")/(UnitManaMax("player"))*100*(RageTrackerFrame:GetWidth()))
+					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_MANA")
 					this:RegisterEvent("UNIT_RAGE")
 					this:RegisterEvent("UNIT_ENERGY")
@@ -86,7 +87,7 @@
 				if UnitClass("player") == "Priest" or UnitClass("player") == "Mage" or UnitClass("player") == "Shaman" or UnitClass("player") == "Warlock" or UnitClass("player") == "Hunter" or UnitClass("player") == "Paladin" then --this should probably be a table lol
 					this:SetBackdropColor(0,0,1)
 					this:SetHeight(RageTrackerFrame:GetHeight())
-					this:SetWidth((UnitMana("player")/(UnitManaMax("player"))*100) )
+					this:SetWidth((UnitMana("player") / (UnitManaMax("player")))*100)
 					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_MANA")
 				end
