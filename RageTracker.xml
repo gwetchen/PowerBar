@@ -77,7 +77,7 @@
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
-					this:RegisterEvent("UNIT_Energy")
+					this:RegisterEvent("UNIT_ENERGY")
 				end
 			</OnLoad>
 			<OnEvent>
