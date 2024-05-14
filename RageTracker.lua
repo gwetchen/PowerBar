@@ -11,28 +11,34 @@ RageTracker_OnEvent = function(frame, event, arg1)
   if UnitPowerType("player") == 1 then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+    frame:SetBackdropColor(1,0,0)
   end
   if UnitPowerType("player") == 3 then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+    frame:SetBackdropColor(1,1,0)
   end
   if UnitPowerType("player") == 0 then
     frame:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+    frame:SetBackdropColor(0,0,1)
   end
 end
 RageTrackerFill_OnEvent = function(frame, event, arg1)
   if event == "UNIT_RAGE" and UnitIsUnit(arg1,"player") and UnitPowerType("player") == 1 then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+    frame:SetBackdropColor(1,0,0)
   end
   if event == "UNIT_ENERGY" and UnitIsUnit(arg1,"player") and UnitPowerType("player") == 3 then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+    frame:SetBackdropColor(1,1,0)
   end
   if event == "UNIT_MANA" and UnitIsUnit(arg1,"player") and UnitPowerType("player") == 0 then
     frame:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+    frame:SetBackdropColor(0,0,1)
   end
 end
 SlashCmdList["RAGETRACKER_COMMAND"] = function(Flag)
