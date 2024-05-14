@@ -10,6 +10,7 @@
 				this:StopMovingOrSizing()
 			</OnMouseUp>
 			<OnLoad>
+				this:SetBackdropColor(0,0,0)
 				if UnitPowerType("player") == 1 then
 					frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
