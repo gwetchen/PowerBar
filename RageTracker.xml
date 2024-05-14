@@ -11,11 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") == "Warrior" or UnitClass("player") == "Rogue" or UnitClass("player") == "Druid" then
-					this:RegisterEvent("VARIABLES_LOADED")	
-				else
-					this:Hide()
-				end
+				this:RegisterEvent("VARIABLES_LOADED")	
 			</OnLoad>
 			<ONEvent>
 				RageTracker_OnEvent(this,event,arg1)
