@@ -18,6 +18,10 @@ RageTrackerFill_OnEvent = function(frame, event, arg1)
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
   end
+  if event == "UNIT_MANA" and UnitIsUnit(arg1,"player") then
+    frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+    RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+  end
 end
 SlashCmdList["RAGETRACKER_COMMAND"] = function(Flag)
 	local flag = string.lower(Flag)
