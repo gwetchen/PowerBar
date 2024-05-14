@@ -11,10 +11,10 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") ~= "Warrior" then
-					this:Hide()
+				if UnitClass("player") == "Warrior" then
+					this:RegisterEvent("VARIABLES_LOADED")	
 				else
-					this:RegisterEvent("VARIABLES_LOADED")
+					this:Hide()
 				end
 			</OnLoad>
 			<ONEvent>
