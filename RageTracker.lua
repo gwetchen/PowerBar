@@ -20,7 +20,7 @@ RageTrackerFill_OnEvent = function(frame, event, arg1)
   end
   if event == "UNIT_MANA" and UnitIsUnit(arg1,"player") then
     --frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-    frame:SetWidth((UnitMana("player") / (UnitManaMax("player")))*100*(RageTrackerFrame:GetWidth()))
+    frame:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
   end
 end
