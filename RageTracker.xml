@@ -62,21 +62,21 @@
 		<Scripts>
 			<OnLoad>
 				if UnitClass("player") == "Warrior" then
-					--this:SetBackdropColor(1,0,0)
+					this:SetBackdropColor(1,0,0)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_RAGE")
 				end
 				if UnitClass("player") == "Rogue" then
-					--this:SetBackdropColor(1,1,0)
+					this:SetBackdropColor(1,1,0)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_ENERGY")
 				end
 				if UnitClass("player") == "Druid" then
-					--this:SetBackdropColor(0,0,1)
+					this:SetBackdropColor(0,0,1)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
@@ -85,7 +85,7 @@
 					this:RegisterEvent("UNIT_ENERGY")
 				end
 				if UnitClass("player") == "Priest" or UnitClass("player") == "Mage" or UnitClass("player") == "Shaman" or UnitClass("player") == "Warlock" or UnitClass("player") == "Hunter" or UnitClass("player") == "Paladin" then --this should probably be a table lol
-					--this:SetBackdropColor(0,0,1)
+					this:SetBackdropColor(0,0,1)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
