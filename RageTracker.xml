@@ -11,7 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") ~= "Warrior" or UnitClass("player") ~= "Rogue" then
+				if UnitClass("player") ~= "Warrior" then
 					this:Hide()
 				else
 					this:RegisterEvent("VARIABLES_LOADED")
