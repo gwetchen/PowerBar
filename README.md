@@ -16,9 +16,9 @@ PowerBar is a fork of [RageTracker](https://github.com/Road-block/RageTracker) w
     /rt scalex {}   Changes width of the bar
     /rt scaley {}   Changes height of the bar
 
-<!-- TODO: add screenshots -->
-<!-- ## Screenshots
-<img src="" align="right" width="48.5%">
-<img src="" width="48.5%">
-<img src="" align="right" width="48.5%">
-<img src="" width="48.5%"> -->
+
+## Screenshots
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/images/energy.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/images/mana.png" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/images/rage.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/images/desc.png" width="48.5%">
