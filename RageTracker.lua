@@ -10,6 +10,10 @@ RageTracker_OnEvent = function(frame, event, arg1)
   frame:EnableMouse(unlocked)
 end
 RageTrackerFill_OnEvent = function(frame, event, arg1)
+  if event == "UNIT_RAGE" and UnitIsUnit(arg1,"player") then
+    frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+    RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+  end
   if event == "UNIT_ENERGY" and UnitIsUnit(arg1,"player") then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))

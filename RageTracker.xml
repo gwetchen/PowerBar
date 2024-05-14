@@ -11,7 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") ~= "Rogue" then
+				if UnitClass("player") ~= "Warrior" or UnitClass("player") ~= "Rogue" then
 					this:Hide()
 				else
 					this:RegisterEvent("VARIABLES_LOADED")
@@ -65,11 +65,19 @@
 	<Frame name="$parent_Fill" parent="RageTrackerFrame">
 		<Scripts>
 			<OnLoad>
-				this:SetBackdropColor(1,0,0)
-				this:SetHeight(RageTrackerFrame:GetHeight())
-				this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-				RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
-				this:RegisterEvent("UNIT_Energy")
+				if UnitClass("player") = "Warrior" then
+					this:SetBackdropColor(1,0,0)
+					this:SetHeight(RageTrackerFrame:GetHeight())
+					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+					this:RegisterEvent("UNIT_RAGE")
+				elseif UnitClass("player") = "Rogue" then
+					this:SetBackdropColor(1,0,0)
+					this:SetHeight(RageTrackerFrame:GetHeight())
+					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+					this:RegisterEvent("UNIT_Energy")
+				end
 			</OnLoad>
 			<OnEvent>
 				RageTrackerFill_OnEvent(this,event,arg1)
