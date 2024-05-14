@@ -1,4 +1,4 @@
-# PowerBars
+# PowerBar
 
 A lightweight AddOn for Vanilla World of Warcraft (1.12.1) that adds a simple power bar for all classes to track their class's primary resource.
 
