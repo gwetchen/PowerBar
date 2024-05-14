@@ -11,7 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") == "Warrior" or UnitClass("player") == "Rogue" then
+				if UnitClass("player") == "Warrior" or UnitClass("player") == "Rogue" or UnitClass("player") == "Druid" then
 					this:RegisterEvent("VARIABLES_LOADED")	
 				else
 					this:Hide()
@@ -73,7 +73,7 @@
 					this:RegisterEvent("UNIT_RAGE")
 				end
 				if UnitClass("player") == "Rogue" then
-					this:SetBackdropColor(1,0,0)
+					this:SetBackdropColor(1,1,0)
 					this:SetHeight(RageTrackerFrame:GetHeight())
 					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
 					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
