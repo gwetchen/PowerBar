@@ -11,7 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitClass("player") ~= "Warrior" then
+				if UnitClass("player") ~= "Warrior" or UnitClass("player") ~= "Rogue" then
 					this:Hide()
 				else
 					this:RegisterEvent("VARIABLES_LOADED")
@@ -26,7 +26,7 @@
 				end
 			</OnSizeChanged>
 		</Scripts>
-		<Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" bgFile="Interface/Tooltips/UI-Tooltip-Background" tile="true">
+		<Backdrop edgeFile="" bgFile="Interface/Tooltips/UI-Tooltip-Background" tile="true">
 			<EdgeSize>
 				<AbsValue val="16"/>
 			</EdgeSize>
