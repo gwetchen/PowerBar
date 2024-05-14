@@ -11,21 +11,6 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
-				if UnitPowerType("player") == 1 then
-					frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
-					frame:SetBackdropColor(1,0,0)
-				end
-				if UnitPowerType("player") == 3 then
-					frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
-					frame:SetBackdropColor(1,1,0)
-				end
-				if UnitPowerType("player") == 0 then
-					frame:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
-					frame:SetBackdropColor(0,0,1)
-				end
 				this:RegisterEvent("VARIABLES_LOADED")
 			</OnLoad>
 			<ONEvent>
@@ -76,6 +61,21 @@
 	<Frame name="$parent_Fill" parent="RageTrackerFrame">
 		<Scripts>
 			<OnLoad>
+				if UnitPowerType("player") == 1 then
+					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+					this:SetBackdropColor(1,0,0)
+				end
+				if UnitPowerType("player") == 3 then
+					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
+					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+					this:SetBackdropColor(1,1,0)
+				end
+				if UnitPowerType("player") == 0 then
+					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
+					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+					this:SetBackdropColor(0,0,1)
+				end
 				if UnitClass("player") == "Warrior" then
 					this:SetBackdropColor(1,0,0)
 					this:SetHeight(RageTrackerFrame:GetHeight())
