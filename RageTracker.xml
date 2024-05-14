@@ -11,6 +11,7 @@
 			</OnMouseUp>
 			<OnLoad>
 				this:SetBackdropColor(0,0,0)
+				this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
 				this:RegisterEvent("VARIABLES_LOADED")
 			</OnLoad>
 			<ONEvent>
