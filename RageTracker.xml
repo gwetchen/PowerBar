@@ -10,21 +10,6 @@
 				this:StopMovingOrSizing()
 			</OnMouseUp>
 			<OnLoad>
-				if UnitPowerType("player") == 1 then
-					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
-					this:SetBackdropColor(1,0,0)
-				end
-				if UnitPowerType("player") == 3 then
-					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
-					this:SetBackdropColor(1,1,0)
-				end
-				if UnitPowerType("player") == 0 then
-					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
-					this:SetBackdropColor(0,0,1)
-				end
 				this:SetBackdropColor(0,0,0)
 				this:RegisterEvent("VARIABLES_LOADED")
 			</OnLoad>
