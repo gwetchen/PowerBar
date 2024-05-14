@@ -8,7 +8,7 @@ RageTracker_OnEvent = function(frame, event, arg1)
   frame:SetHeight(30*scaley)
   frame:SetWidth(220*scalex)
   frame:EnableMouse(unlocked)
-  if UnitPowerType("player") == 1 then
+  --[[if UnitPowerType("player") == 1 then
     frame:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
     frame:SetBackdropColor(1,0,0)
@@ -22,7 +22,7 @@ RageTracker_OnEvent = function(frame, event, arg1)
     frame:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
     RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
     frame:SetBackdropColor(0,0,1)
-  end
+  end]]--
 end
 RageTrackerFill_OnEvent = function(frame, event, arg1)
   if event == "UNIT_RAGE" and UnitIsUnit(arg1,"player") and UnitPowerType("player") == 1 then
