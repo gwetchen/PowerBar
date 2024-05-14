@@ -68,8 +68,8 @@
 				this:SetBackdropColor(1,0,0)
 				this:SetHeight(RageTrackerFrame:GetHeight())
 				this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-				RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
-				this:RegisterEvent("UNIT_RAGE")
+				RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+				this:RegisterEvent("UNIT_Energy")
 			</OnLoad>
 			<OnEvent>
 				RageTrackerFill_OnEvent(this,event,arg1)
