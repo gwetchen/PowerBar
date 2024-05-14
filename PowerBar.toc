@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: PowerBar
+## Notes: Modified by Gwetchen and twinkgirlthing
+## Author: Anaron and Roadblock
+## Version: 1.0.0-alpha
+## SavedVariablesPerCharacter: PowerBarDBPC
+
+PowerBar.xml

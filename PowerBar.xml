@@ -1,7 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
-	<Script file="RageTracker.lua" />
-	<Frame name="RageTrackerFrame" enableMouse="true" movable="true" frameStrata="MEDIUM" frameLevel="150" userPlaced="true" parent="UIParent">
+	<Script file="PowerBar.lua" />
+	<Frame name="PowerBarFrame" enableMouse="true" movable="true" frameStrata="MEDIUM" frameLevel="150" userPlaced="true" parent="UIParent">
 		<Scripts>
 			<OnMouseDown>
 				this:StartMoving()
@@ -14,11 +14,11 @@
 				this:RegisterEvent("VARIABLES_LOADED")
 			</OnLoad>
 			<ONEvent>
-				RageTracker_OnEvent(this,event,arg1)
+				PowerBar_OnEvent(this,event,arg1)
 			</ONEvent>
 			<OnSizeChanged>
-				if RageTrackerFrame_Fill then
-					RageTrackerFrame_Fill:SetHeight(this:GetHeight())
+				if PowerBarFrame_Fill then
+					PowerBarFrame_Fill:SetHeight(this:GetHeight())
 				end
 			</OnSizeChanged>
 		</Scripts>
@@ -40,7 +40,7 @@
 			<Anchor point="CENTER" />
 		</Anchors>
 	</Frame>
-	<Frame name="$parent_TextFrame" parent="RageTrackerFrame">
+	<Frame name="$parent_TextFrame" parent="PowerBarFrame">
 		<Size>
 			<AbsDimension x="200" y="40" />
 		</Size>
@@ -58,42 +58,42 @@
 			</Layer>
 		</Layers>
 	</Frame>
-	<Frame name="$parent_Fill" parent="RageTrackerFrame">
+	<Frame name="$parent_Fill" parent="PowerBarFrame">
 		<Scripts>
 			<OnLoad>
 				if UnitClass("player") == "Warrior" then
 					this:SetBackdropColor(1,0,0)
-					this:SetHeight(RageTrackerFrame:GetHeight())
-					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
+					this:SetHeight(PowerBarFrame:GetHeight())
+					this:SetWidth(UnitMana("player")*(PowerBarFrame:GetWidth())/100+1)
+					PowerBarFrame_TextFrame_Text:SetText("Rage: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_RAGE")
 				end
 				if UnitClass("player") == "Rogue" then
 					this:SetBackdropColor(1,1,0)
-					this:SetHeight(RageTrackerFrame:GetHeight())
-					this:SetWidth(UnitMana("player")*(RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
+					this:SetHeight(PowerBarFrame:GetHeight())
+					this:SetWidth(UnitMana("player")*(PowerBarFrame:GetWidth())/100+1)
+					PowerBarFrame_TextFrame_Text:SetText("Energy: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_ENERGY")
 				end
 				if UnitClass("player") == "Druid" then
 					this:SetBackdropColor(0,0,1)
-					this:SetHeight(RageTrackerFrame:GetHeight())
-					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+					this:SetHeight(PowerBarFrame:GetHeight())
+					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (PowerBarFrame:GetWidth())/100+1)
+					PowerBarFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_MANA")
 					this:RegisterEvent("UNIT_RAGE")
 					this:RegisterEvent("UNIT_ENERGY")
 				end
 				if UnitClass("player") == "Priest" or UnitClass("player") == "Mage" or UnitClass("player") == "Shaman" or UnitClass("player") == "Warlock" or UnitClass("player") == "Hunter" or UnitClass("player") == "Paladin" then --this should probably be a table lol
 					this:SetBackdropColor(0,0,1)
-					this:SetHeight(RageTrackerFrame:GetHeight())
-					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (RageTrackerFrame:GetWidth())/100+1)
-					RageTrackerFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
+					this:SetHeight(PowerBarFrame:GetHeight())
+					this:SetWidth((UnitMana("player") / (UnitManaMax("player"))) * 100 * (PowerBarFrame:GetWidth())/100+1)
+					PowerBarFrame_TextFrame_Text:SetText("Mana: "..UnitMana("player"))
 					this:RegisterEvent("UNIT_MANA")
 				end
 			</OnLoad>
 			<OnEvent>
-				RageTrackerFill_OnEvent(this,event,arg1)
+				PowerBarFill_OnEvent(this,event,arg1)
 			</OnEvent>
 		</Scripts>
 		<Backdrop bgFile="Interface/Tooltips/UI-Tooltip-Background" tile="true">
