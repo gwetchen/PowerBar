@@ -41,7 +41,8 @@ PowerBarFill_OnEvent = function(frame, event, arg1)
     frame:SetBackdropColor(0,0,1)
   end
 end
-SlashCmdList["RAGETRACKER_COMMAND"] = function(Flag)
+-- todo: add help commands, fix scale commands, add hide command
+SlashCmdList["POWERBAR_COMMAND"] = function(Flag)
 	local flag = string.lower(Flag)
   local scalex, scaley, unlocked
 	if string.sub(flag,1,6) == "scalex" then
@@ -70,5 +71,5 @@ SlashCmdList["RAGETRACKER_COMMAND"] = function(Flag)
     end
   end
 end
-SLASH_RAGETRACKER_COMMAND1 = "/pb";
-SLASH_RAGETRACKER_COMMAND2 = "/powerbar"
+SLASH_POWERBAR_COMMAND1 = "/pb";
+SLASH_POWERBAR_COMMAND2 = "/powerbar"
