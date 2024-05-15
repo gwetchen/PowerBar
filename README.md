@@ -18,7 +18,7 @@ PowerBar is a fork of [RageTracker](https://github.com/Road-block/RageTracker) w
 
 <!-- TODO: when merging to master these links must change! -->
 ## Screenshots
-<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/energy.png" align="right" width="48.5%">
-<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/mana.png" width="48.5%">
-<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/rage.png" align="right" width="48.5%">
-<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/desc.png" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/PowerBar/master/images/energy.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/PowerBar/master/images/mana.png" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/PowerBar/master/images/rage.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/PowerBar/master/images/desc.png" width="48.5%">
