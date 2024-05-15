@@ -1,8 +1,8 @@
-# PowerBars
+# PowerBar
 
 A lightweight AddOn for Vanilla World of Warcraft (1.12.1) that adds a simple power bar for all classes to track their class's primary resource.
 
-PowerBars is a fork of [RageTracker](https://github.com/Road-block/RageTracker) with an extended feature list, including bars for energy and mana as well.
+PowerBar is a fork of [RageTracker](https://github.com/Road-block/RageTracker) with an extended feature list, including bars for energy and mana as well.
 
 ## Installation
 1. Download **[Releases](https://github.com/gwetchen/RageTracker/releases)**
@@ -16,9 +16,9 @@ PowerBars is a fork of [RageTracker](https://github.com/Road-block/RageTracker) 
     /rt scalex {}   Changes width of the bar
     /rt scaley {}   Changes height of the bar
 
-<!-- TODO: add screenshots -->
-<!-- ## Screenshots
-<img src="" align="right" width="48.5%">
-<img src="" width="48.5%">
-<img src="" align="right" width="48.5%">
-<img src="" width="48.5%"> -->
+<!-- TODO: when merging to master these links must change! -->
+## Screenshots
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/energy.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/mana.png" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/rage.png" align="right" width="48.5%">
+<img src="https://raw.githubusercontent.com/gwetchen/RageTracker/refactor/images/desc.png" width="48.5%">

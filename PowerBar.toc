@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: PowerBar
+## Notes:  Fork of RageTracker by Anaron and Roadblock
+## Author: gwetchen and twinkgirlthing
+## Version: 1.0.0-alpha
+## SavedVariablesPerCharacter: PowerBarDBPC
+
+PowerBar.xml
